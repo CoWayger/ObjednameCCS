@@ -1,0 +1,7 @@
+importOrderSortSpecifiers: true
+importOrderParserPlugins:
+  - importAssertions
+  - decorators-legacy
+singleQuote: false
+tabWidth: 4
+useTabs: true
