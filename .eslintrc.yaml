@@ -1,0 +1,52 @@
+env:
+  browser: true
+  es2021: true
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:@typescript-eslint/recommended
+  - prettier
+  - plugin:storybook/recommended
+plugins:
+  - '@typescript-eslint'
+parser: '@typescript-eslint/parser'
+parserOptions:
+  sourceType: module
+  ecmaVersion: latest
+  ecmaFeatures:
+    jsx: true
+ignorePatterns:
+  - 'ui_modules/jslibs/*'
+  - 'ui_modules/gps_driver/*'
+  - 'node_modules/*(.js|.ts)'
+rules:
+  no-mixed-spaces-and-tabs: error
+  indent:
+    - error
+    - tab
+    - SwitchCase: 1
+  linebreak-style: 
+    - error
+    - unix
+  quotes:
+    - error
+    - double
+    - allowTemplateLiterals: true
+  semi:
+    - error
+    - always
+  '@typescript-eslint/no-this-alias': off
+  '@typescript-eslint/no-array-constructor': off
+globals:
+  $: readonly
+  StoreManager: readonly
+  FoodFactory: readonly
+  factoryCode: readonly
+  companyCode: readonly
+  lang: readonly
+  exports: readonly
+  EventBus: readonly
+  factoryID: readonly
+  companyID: readonly
+  html2canvas: readonly
+  ObjednamePlugin: readonly
